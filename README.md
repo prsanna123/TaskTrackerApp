@@ -1,9 +1,15 @@
 Steps to run the TaskTrackerApp:
+
 clone the git repository 
+
 install the concurrently library and jsonforms library
+
 npm i concurrently
+
 npm i jsonforms
+
 To run the application run the below command:
+
 npm run both
 
 
