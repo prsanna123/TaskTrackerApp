@@ -27,6 +27,7 @@ const SignUp = (props) => {
             props.showAlert("account created successfully","success");
         }
         else{
+          
             props.showAlert("Invalid credentials","danger");
         }
     }

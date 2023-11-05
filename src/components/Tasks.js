@@ -8,6 +8,7 @@ const Tasks = (props) => {
     let navigate = useNavigate();
     const context = useContext(taskContext);
     const { tasks, getTasks,editTask } = context;
+    console.log(tasks);
     useEffect(() => {
         if(localStorage.getItem('token')){
             getTasks()

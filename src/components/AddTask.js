@@ -42,7 +42,7 @@ const AddTask = () => {
           <option value="low" style={{ color: "green" }}>Low</option>
         </select></div>
       </div>
-                <button disabled={task.title.length<5 || task.description.length<5} type="submit" className="btn btn-primary" onClick={handleClick}>Add task</button>
+                <button disabled={task.title.length<5 || task.description.length<5 || new Date(task.duedate) <= new Date()} type="submit" className="btn btn-primary" onClick={handleClick}>Add task</button>
             </form>
         </div>
     )

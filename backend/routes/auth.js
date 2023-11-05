@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var fetchuser = require('../middleware/fetchuser');
 
-const JWT_SECRET = 'Thisisjwtsecret';
+const JWT_SECRET = 'Harryisagoodb$oy';
 
 // ROUTE 1: Create a User using: POST "/api/auth/createuser". No login required
 router.post('/createuser', [
@@ -42,11 +42,13 @@ router.post('/createuser', [
         id: user.id
       }
     }
+    let success=false;
     const authtoken = jwt.sign(data, JWT_SECRET);
     console.log(authtoken)
 
     // res.json(user)
-    res.json({ authtoken })
+    success=true
+    res.json({ success,authtoken })
 
   } catch (error) {
     console.error(error.message);
