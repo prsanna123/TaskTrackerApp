@@ -1,3 +1,12 @@
+Steps to run the TaskTrackerApp:
+clone the git repository 
+install the concurrently library and jsonforms library
+npm i concurrently
+npm i jsonforms
+To run the application run the below command:
+npm run both
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
