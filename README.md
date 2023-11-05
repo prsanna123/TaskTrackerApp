@@ -1,3 +1,6 @@
+Requirements:Mongodb should be installed
+
+
 Steps to run the TaskTrackerApp:
 
 clone the git repository 
@@ -6,12 +9,12 @@ install the concurrently library and jsonforms library
 
 npm i concurrently
 
-npm i jsonforms
-
 To run the application run the below command:
 
 npm run both
 
+
+The functionality of the website is being explained in the TaskTracker power point presentation in the github.
 
 # Getting Started with Create React App
 
