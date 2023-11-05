@@ -14,6 +14,8 @@ To run the application run the below command:
 npm run both
 
 
+The functionality of the website is being explained in the TaskTracker power point presentation in the github.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
