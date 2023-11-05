@@ -22,7 +22,6 @@ const Tasks = (props) => {
     const [task, setTask] = useState({id:"",etitle: "", edescription: ""})
 
     const updateTask = (currentTask) => {
-        console.log("click")
         ref.current.click();
         setTask({id:currentTask._id,etitle: currentTask.title, edescription: currentTask.description})
         
@@ -32,7 +31,6 @@ const Tasks = (props) => {
         console.log("Updating the task...", task)
         editTask(task.id,task.etitle,task.edescription)
         refClose.current.click();
-        console.log("beftre")
         // props.showAlert("updated successfully","success")
     }
 

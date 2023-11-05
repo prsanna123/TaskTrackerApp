@@ -72,7 +72,6 @@ router.put('/updatetask/:id', fetchuser, async (req, res) => {
 })
 router.put('/markdone/:id', fetchuser, async (req, res) => {
     const { title, description} = req.body;
-    console.log("in markdone")
     try {
         let task = await Task.findById(req.params.id);
         if (!task) { return res.status(404).send("Not Found") }

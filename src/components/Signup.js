@@ -6,7 +6,6 @@ const SignUp = (props) => {
     let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        console.log("submitted");
         e.preventDefault();
         
         const {name,email,password,cpassword}=credentials;

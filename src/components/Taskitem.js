@@ -6,8 +6,7 @@ const Taskitem = (props) => {
     const context = useContext(taskContext);
     const { deleteTask,MarkDone } = context;
     const { task, updateTask } = props;
-    console.log(task)
-    let datePart="lok"
+    let datePart=""
     
       const datetimeString = task.date; // Replace this with your datetime string
     

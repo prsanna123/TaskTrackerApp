@@ -15,7 +15,7 @@ router.post('/createuser', [
   body('password', 'Password must be atleast 5 characters').isLength({ min: 5 }),
 ], async (req, res) => {
   // If there are errors, return Bad request and the errors
-  console.log("in crea user")
+
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
@@ -25,7 +25,7 @@ router.post('/createuser', [
     // Check whether the user with this email exists already
     let user = await User.findOne({ email: req.body.email });
     if (user) {
-      console.log(user)
+      console.log("user created",user);
       return res.status(400).json({ error: "Sorry a user with this email already exists" })
     }
     const salt = await bcrypt.genSalt(10);
@@ -63,7 +63,6 @@ router.post('/login', [
   let success = false;
   // If there are errors, return Bad request and the errors
   const errors = validationResult(req);
-  console.log("after validation")
   if (!errors.isEmpty()) {
     console.log("errors in the route")
     return res.status(400).json({ errors: errors.array() });

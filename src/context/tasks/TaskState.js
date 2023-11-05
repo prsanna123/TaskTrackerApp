@@ -56,7 +56,6 @@ const TaskState = (props) => {
   // Edit a Task
   const editTask = async (id, title, description) => {
     // API Call 
-    console.log("in edit")
     const response = await fetch(`${host}/api/tasks/updatetask/${id}`, {
       method: 'PUT',
       headers: {
@@ -76,15 +75,11 @@ const TaskState = (props) => {
         newTasks[index].description = description;
         break; 
       }
-    }  
-    console.log("setted")
+    } 
     setTasks(newTasks);
   }
   const MarkDone=async (id,title, description,date) => {
     // API Call 
-    console.log(id._id)
-    console.log(title)
-    console.log("in edit")
     const response =await fetch(`${host}/api/tasks/markdone/${id._id}`, {
       method: 'PUT',
       headers: {
@@ -96,7 +91,6 @@ const TaskState = (props) => {
     const json = await response.json(); 
 
      let newTasks = JSON.parse(JSON.stringify(tasks))
-     console.log(newTasks)
     // Logic to edit in client
     for (let index = 0; index < newTasks.length; index++) {
       const element = newTasks[index];
@@ -107,9 +101,7 @@ const TaskState = (props) => {
         newTasks[index].complete = true;
         break; 
       }
-    }  
-    console.log("setted")
-    console.log(newTasks)
+    } 
     setTasks(newTasks);
   
 
