@@ -70,6 +70,7 @@ router.put('/updatetask/:id', fetchuser, async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 })
+//Route 4:Mark the task as completed
 router.put('/markdone/:id', fetchuser, async (req, res) => {
     const { title, description} = req.body;
     try {
@@ -87,7 +88,7 @@ router.put('/markdone/:id', fetchuser, async (req, res) => {
     }
 })
 
-// ROUTE 4: Delete an existing Task using: DELETE "/api/tasks/deletetask". Login required
+// ROUTE 5: Delete an existing Task using: DELETE "/api/tasks/deletetask". Login required
 router.delete('/deletetask/:id', fetchuser, async (req, res) => {
     try {
         // Find the task to be delete and delete it

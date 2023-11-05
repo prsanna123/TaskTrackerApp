@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-
+// Schema to store the details of the Task
 const TasksSchema = new Schema({
     user:{
         type: mongoose.Schema.Types.ObjectId,

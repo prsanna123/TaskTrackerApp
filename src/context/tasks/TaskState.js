@@ -1,6 +1,6 @@
 import TaskContext from "./taskContext";
 import { useState } from "react";
-
+//It contains all the API calls made in the application
 const TaskState = (props) => {
   const host = "http://localhost:5000"
   const tasksInitial = []

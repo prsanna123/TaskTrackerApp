@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-
+// Schema to store the details of the user
 const UserSchema = new Schema({
     name:{
         type: String,
