@@ -7,7 +7,7 @@ const { body, validationResult } = require('express-validator');
 // ROUTE 1: Get All the Tasks using: GET "/api/tasks/getuser". Login required
 router.get('/fetchalltasks', fetchuser, async (req, res) => {
     try {
-        const tasks = await Task.find({ user: req.user.id });
+        const tasks = await Task.find({ user: req.user._id });
         res.json(tasks)
     } catch (error) {
         console.error(error.message);
