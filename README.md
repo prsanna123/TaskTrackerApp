@@ -1,4 +1,4 @@
-Requirements:Mongodb should be installed
+Requirements:Mongodb,React,Node,Express should be installed
 
 
 Steps to run the TaskTrackerApp:
