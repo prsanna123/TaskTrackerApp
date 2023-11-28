@@ -3,7 +3,9 @@ const express=require('express')
 connectToMongo;
 const app=express()
 var cors = require('cors')
-app.use(cors())
+app.use(cors({
+    origin:"*",
+  }))
 const port=5000
 app.use(express.json())
 //available routes
