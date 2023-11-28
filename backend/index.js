@@ -4,9 +4,7 @@ connectToMongo;
 const app=express()
 var cors = require('cors')
 app.use(cors({
-    origin:"https://task-tracker-app-6go3.vercel.app",
-    methods:["POST","GET"],
-    credentials:true
+    origin:"*",
   }))
 const port=5000
 app.use(express.json())
