@@ -28,7 +28,7 @@ const Navbar = () => {
                         </li>
 
                     </ul>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className="collapse navbar-collapse" id="navmenu">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
             {!localStorage.getItem('token')?<form className="d-flex">
